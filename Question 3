@@ -1,0 +1,4 @@
+select count(OCC.CUS_ID) as TOTAL_NO_OF_CUSTOMERS , OCC.CUS_GENDER from  
+(select OC.CUS_ID , OC.CUS_GENDER from 
+(select O.* , C.CUS_NAME , C.CUS_GENDER from `Order` O INNER JOIN Customer C where O.CUS_ID = C.CUS_ID and ORD_AMOUNT >= 3000) 
+as OC group by OC.CUS_ID ) as OCC group by OCC.CUS_GENDER; 
