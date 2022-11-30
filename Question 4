@@ -1,0 +1,2 @@
+select O.* , P.PRO_NAME from `Order` O , Supplier_pricing SP , Product P
+where O.CUS_ID = 2 and O.PRICING_ID = SP.PRICING_ID and SP.PRO_ID = P.PRO_ID;
