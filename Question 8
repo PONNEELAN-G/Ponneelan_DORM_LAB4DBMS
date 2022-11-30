@@ -1,0 +1,2 @@
+select CUS_NAME , CUS_GENDER from Customer where 
+ ( Customer.CUS_NAME LIKE 'A%' OR Customer.CUS_NAME LIKE '%A' );
