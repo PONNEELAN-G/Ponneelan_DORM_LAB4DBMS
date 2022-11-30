@@ -1,0 +1,2 @@
+select P.PRO_ID , P.PRO_NAME from Product P , supplier_pricing SP , `Order` O
+ WHERE P.PRO_ID = SP.PRO_ID and O.PRICING_ID = SP.PRICING_ID and O.ORD_DATE > "2021-10-05";
